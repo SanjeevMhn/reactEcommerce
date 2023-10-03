@@ -64,6 +64,8 @@ nav .offscreen-menu-container{
   padding: 7px 0;
 }
 
+
+
 @media screen and (min-width: 425px){
   nav .nav-link-list{
     display: flex;
@@ -72,12 +74,20 @@ nav .offscreen-menu-container{
   nav .offscreen-menu-container{
     display: none;
   }
+
+  .main-wrapper .offscreen-navigation{
+    display: none!important;
+  }
 }
 
 nav .nav-link-list .nav-item .nav-link{
   text-decoration: none;
   color: #fff;
   padding: 5px 15px;
+}
+
+nav .nav-link-list .nav-item .nav-link.active{
+  color: #3393c2;
 }
 
 nav .nav-link-list .nav-item .nav-link.cart-num{
@@ -141,12 +151,40 @@ nav .nav-link-list .nav-item .nav-link.cart-num .cart-num-ind{
   position: absolute;
   top: 0;
   height: 100vh;
-  width: 35vh;
-  background: #fff;
+  width: 45vh;
+  background: #ffffff;
   z-index: 99;
   right: -100vh;
+  display: none;
 }
 
 .main-wrapper .offscreen-navigation.show{
   right: 0;
+  padding: 15px 0;
+  display: block;
 }
+
+.offscreen-navigation .offscreen-link-list{
+  display: flex;
+  flex-direction: column; 
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offscreen-navigation .offscreen-link-list .nav-item .nav-link.active{
+  color: #fff!important;
+}
+
+.offscreen-navigation .offscreen-link-list .nav-item .nav-link{
+  color: #000!important;
+  padding: 10px 20px;
+  font-size: 18px;
+  display: flex;
+}
+
+.offscreen-navigation .offscreen-link-list .nav-item .nav-link.active{
+  background: #3393c2;
+  color: #fff;
+}
+

@@ -1,0 +1,152 @@
+#root {
+  width: 100%;
+}
+
+.brand-link{
+  color: #fff;
+}
+
+.title-text{
+  margin: 0;
+}
+
+table tr td{
+  text-align: left;
+  padding: 5px 12px;
+}
+
+table tr td.amount{
+  text-align: right;
+}
+
+table tr td .quantity{
+  padding: 5px 15px;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-container{
+  overflow-x: auto;
+}
+
+nav{
+  position: sticky;
+  top: 0;
+  background: #242424;
+}
+
+nav .inner-container{
+
+  justify-content: space-between;
+ 
+}
+
+.inner-container{
+  padding: 0 30px;
+  max-width: 850px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+
+nav .nav-link-list{
+  display: none;
+  list-style-type: none;
+  align-items: center;
+}
+
+
+nav .offscreen-menu-container{
+  padding: 7px 0;
+}
+
+@media screen and (min-width: 425px){
+  nav .nav-link-list{
+    display: flex;
+  }
+
+  nav .offscreen-menu-container{
+    display: none;
+  }
+}
+
+nav .nav-link-list .nav-item .nav-link{
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 15px;
+}
+
+nav .nav-link-list .nav-item .nav-link.cart-num{
+  position: relative;
+}
+
+nav .nav-link-list .nav-item .nav-link.cart-num .cart-num-ind{
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #ffaf24;
+  font-size: 10px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -2.5px;
+  right: -2.5px;
+  font-weight: 600;
+}
+
+
+.product-items-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+  gap: 25px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-items-list .product-item .product-card{
+  border: 1px solid #ffffff54;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main-section{
+  padding: 15px 0;
+  min-height: calc(100vh - calc(56px + 30px));
+}
+.product-items-list .product-item .product-card .product-quantity{
+  padding: 10px 0;
+}
+
+.product-items-list .product-item .product-card .product-quantity .product-quantity-num{
+  padding: 15px;
+}
+
+.main-wrapper{
+  position: relative;
+}
+
+.main-wrapper .offscreen-navigation{
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 35vh;
+  background: #fff;
+  z-index: 99;
+  right: -100vh;
+}
+
+.main-wrapper .offscreen-navigation.show{
+  right: 0;
+}

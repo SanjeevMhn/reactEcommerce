@@ -1,10 +1,10 @@
 import { useState, FC} from 'react';
-import { ProductItem } from "./App";
+import { HandleAddToCart, ProductItem } from "./App";
 
 
 type ProductCardProps = {
 	item: ProductItem,
-	handleAddToCart: (obj:ProductItem, quantity:number) => void,
+	handleAddToCart: HandleAddToCart,
 }
 
 const ProductCard:FC<ProductCardProps> = ({item,handleAddToCart}) => {

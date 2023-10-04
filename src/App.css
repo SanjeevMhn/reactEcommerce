@@ -147,21 +147,33 @@ nav .nav-link-list .nav-item .nav-link.cart-num .cart-num-ind{
   position: relative;
 }
 
+.main-wrapper.fixed{
+  position: fixed;
+  width: 100%;
+}
+
 .main-wrapper .offscreen-navigation{
   position: absolute;
   top: 0;
-  height: 100vh;
-  width: 45vh;
-  background: #ffffff;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: #ffffff87;
   z-index: 99;
-  right: -100vh;
   display: none;
 }
 
 .main-wrapper .offscreen-navigation.show{
-  right: 0;
-  padding: 15px 0;
-  display: block;
+  /*right: 0;
+  padding: 15px 0;*/
+  display: flex;
+  justify-content: flex-end;
+}
+
+.offscreen-navigation .inner-nav-container{
+  width: 70%;
+  background: #fff;
 }
 
 .offscreen-navigation .offscreen-link-list{

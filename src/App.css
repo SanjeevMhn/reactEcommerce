@@ -200,3 +200,12 @@ nav .nav-link-list .nav-item .nav-link.cart-num .cart-num-ind{
   color: #fff;
 }
 
+.toast-container{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 25px;
+  background: #fff;
+  border: 1px solid #ffffff54;
+  box-shadow: 0 3px 8px 12px #ffffff54;
+}

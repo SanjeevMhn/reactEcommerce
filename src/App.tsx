@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from 'react'
 import './App.css'
-import Home from './Home';
-import CartTable from './CartTable'
-import Products from './Products';
-import Layout from './Layout';
+import Home from './components/Home';
+import CartTable from './components/CartTable'
+import Products from './components/Products';
+import Layout from './components/Layout';
 import { Route, Routes } from 'react-router-dom';
 
 export type ProductItem = {
@@ -23,7 +23,7 @@ export type HandleItemDelete = (obj: CartItems) => void;
 const App:FC = () => {
 
   const [total, setTotal] = useState<number>(0);
-  let [items,setItems] = useState<ProductItem[]>([
+  const [items,setItems] = useState<ProductItem[]>([
     {
       id: 1,
       name: "Chips",
@@ -56,7 +56,8 @@ const App:FC = () => {
     },
   ])
 
-  let [cart, setCart] = useState<CartItems[]>([]);
+  const [cart, setCart] = useState<CartItems[]>([]);
+  const [showToast, setShowToast] = useState<ToastProps>();
 
   const getTotalAmount = ():void => {
     let sum = 0;

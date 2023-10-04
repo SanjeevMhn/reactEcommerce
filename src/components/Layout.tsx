@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
-import { CartItems } from "./App";
+import { CartItems } from "../App";
 
 
 type LayoutProps = {

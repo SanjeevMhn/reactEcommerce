@@ -1,5 +1,5 @@
 import{ FC } from 'react';
-import {  HandleAddToCart, ProductItem } from './App';
+import {  HandleAddToCart, ProductItem } from '../App';
 import ProductCard from './ProductCard';
 
 type ProductsProps = {

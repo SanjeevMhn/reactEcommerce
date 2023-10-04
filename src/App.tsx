@@ -5,6 +5,7 @@ import CartTable from './components/CartTable'
 import Products from './components/Products';
 import Layout from './components/Layout';
 import { Route, Routes } from 'react-router-dom';
+import { useToast } from './context/ToastContext';
 
 export type ProductItem = {
   id: number,
@@ -57,7 +58,7 @@ const App:FC = () => {
   ])
 
   const [cart, setCart] = useState<CartItems[]>([]);
-  const [showToast, setShowToast] = useState<ToastProps>();
+  const { showToast } = useToast();
 
   const getTotalAmount = ():void => {
     let sum = 0;
@@ -97,6 +98,7 @@ const App:FC = () => {
     if(result){
       const updatedCartList = cart.filter((ct) => ct.id !== obj.id);
       setCart(updatedCartList);
+      showToast("Item Deleted", "success");
     }
     
   }
@@ -111,6 +113,8 @@ const App:FC = () => {
       quantity: quantity
     }
     setCart([...cart,cartItem]);
+    showToast("Item added to cart!","success");
+
   }
 
   useEffect(() => {

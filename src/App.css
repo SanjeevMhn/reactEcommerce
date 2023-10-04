@@ -173,7 +173,8 @@ nav .nav-link-list .nav-item .nav-link.cart-num .cart-num-ind{
 
 .offscreen-navigation .inner-nav-container{
   width: 70%;
-  background: #fff;
+  background: #242424;
+  border: 1px solid #ffffff54;
 }
 
 .offscreen-navigation .offscreen-link-list{
@@ -184,12 +185,9 @@ nav .nav-link-list .nav-item .nav-link.cart-num .cart-num-ind{
   margin: 0;
 }
 
-.offscreen-navigation .offscreen-link-list .nav-item .nav-link.active{
-  color: #fff!important;
-}
 
 .offscreen-navigation .offscreen-link-list .nav-item .nav-link{
-  color: #000!important;
+  color: #fff!important;
   padding: 10px 20px;
   font-size: 18px;
   display: flex;
@@ -201,11 +199,41 @@ nav .nav-link-list .nav-item .nav-link.cart-num .cart-num-ind{
 }
 
 .toast-container{
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   right: 10px;
-  padding: 25px;
-  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.toast-container .toast{
+  padding: 15px;
+  background: #242424;
   border: 1px solid #ffffff54;
-  box-shadow: 0 3px 8px 12px #ffffff54;
+/*  box-shadow: 0 3px 12px 3px #ffffff84;*/
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toast-container .toast.success .icon-container.error{
+  display: none;
+}
+
+.toast-container .toast.error .icon-container.success{
+  display: none;
+}
+
+
+.toast-container .toast .toast-message{
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.toast-container:empty{
+  display: none;
 }

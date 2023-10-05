@@ -28,6 +28,10 @@ const menuItems:MenuItem[] = [
 		link: "/cart",
 		name: "Cart",
 	},
+	{
+		link: "/login",
+		name: "Login"
+	},
 ]
 
 const MenuLink:FC<MenuLinkProps> =  ({link,name,cart}) => {
@@ -81,7 +85,7 @@ const Layout:FC<LayoutProps> = ({cart}) => {
 							menuItems.map((item,index) => {
 								return(
 									item.name === 'Cart' ? (
-										<li className="nav-item" key={index+1}>
+										<li className="nav-item" key={index}>
 											<MenuLink link={item.link} name={item.name} cart={cart} />
 										</li>
 									):(

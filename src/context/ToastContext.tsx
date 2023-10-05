@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react';
- import Toast, { ToastProps } from '../components/Toast';
+import Toast, { ToastProps } from '../components/Toast';
 
 const ToastContext = createContext();
 
@@ -17,7 +17,7 @@ export const ToastProvider = ({children}:any) => {
 			type: type
 		}
 
-		setToasts((prevToasts) => [ newToast, ...prevToasts]);
+		setToasts((prevToasts) => [...prevToasts,newToast]);
 
 		setTimeout(() => removeToast(newToast.id), 2000);
 	}

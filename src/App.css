@@ -207,13 +207,30 @@ nav .nav-link-list .nav-item .nav-link.cart-num .cart-num-ind{
   gap: 15px;
 }
 
+.confirm-container{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
 
-.toast-container .toast{
+.confirm-container.show{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.toast-container .toast,
+.confirm-container{
   padding: 15px;
   background: #242424;
   border: 1px solid #ffffff54;
 /*  box-shadow: 0 3px 12px 3px #ffffff84;*/
   border-radius: 5px;
+}
+
+.toast-container .toast{
   display: flex;
   align-items: center;
   gap: 10px;

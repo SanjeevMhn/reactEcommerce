@@ -94,7 +94,7 @@ const App:FC = () => {
   }
 
   const handleItemDelete:HandleItemDelete = (obj: CartItems):void => {
-    let result:boolean = window.confirm("Do you want to delete the item?");
+    let result:boolean = window.confirm('Do you want to remove this item from cart?');
     if(result){
       const updatedCartList = cart.filter((ct) => ct.id !== obj.id);
       setCart(updatedCartList);

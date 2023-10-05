@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { CartItems, HandleItemDelete, HandleUpdateQuantity } from "./App";
+import { CartItems, HandleItemDelete, HandleUpdateQuantity } from "../App";
 
 type CartTableProps = {
 	handleDecreaseQuantity: HandleUpdateQuantity,

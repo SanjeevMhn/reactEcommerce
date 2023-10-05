@@ -8,10 +8,10 @@ import { ToastProvider } from './context/ToastContext.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-  <ToastProvider>
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>
-  </ToastProvider>
+    <ToastProvider>
+      <BrowserRouter>
+        <App/>
+      </BrowserRouter>
+    </ToastProvider>
   </React.StrictMode>,
 )

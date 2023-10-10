@@ -3,7 +3,8 @@ import ConfirmContext from "../context/ConfirmContext";
 import { SHOW_CONFIRM, HIDE_CONFIRM, ConfirmStateType } from "../store/Reducer";
 
 
-let resolveCallback:(val:boolean) => void;
+let resolveCallback:any;
+
 
 function useConfirmation(){
 	const [state, dispatch] = useContext(ConfirmContext);

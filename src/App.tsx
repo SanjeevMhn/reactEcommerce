@@ -6,6 +6,7 @@ import Products from './components/Products';
 import Layout from './components/Layout';
 import { Route, Routes } from 'react-router-dom';
 import { useToast } from './context/ToastContext';
+import useConfirmation from './hooks/useConfrmation';
 
 export type ProductItem = {
   id: number,
@@ -93,8 +94,11 @@ const App:FC = () => {
     setCart(updatedCartList);
   }
 
-  const handleItemDelete:HandleItemDelete = (obj: CartItems):void => {
-    let result:boolean = window.confirm('Do you want to remove this item from cart?');
+
+  const {confirm} = useConfirmation();
+  const handleItemDelete:HandleItemDelete = async(obj: CartItems) => {
+ 
+    let result = await confirm('Do you want to delete this item?');
     if(result){
       const updatedCartList = cart.filter((ct) => ct.id !== obj.id);
       setCart(updatedCartList);

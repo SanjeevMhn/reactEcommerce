@@ -212,13 +212,23 @@ nav .nav-link-list .nav-item .nav-link.cart-num .cart-num-ind{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  display: none;
-}
-
-.confirm-container.show{
   display: flex;
   flex-direction: column;
+  max-width: 300px;
+  width: 85%;
 }
+
+.confirm-container .confirm-message{
+  font-size: 15px;
+}
+
+.confirm-container .confirm-actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  font-size: 12px;
+}
+
 
 
 .toast-container .toast,
